@@ -5,15 +5,23 @@
   --title-color: #212121;
   --light-background: #f5f4fa;
   --dark-background: #2f303a;
+  --main-text-color: #757575;
+  --secondary-text-color: #ffffff;
+  --contacts-text-color: rgba(255, 255, 255, 0.6);
+  --black-logo-color: #000000;
 }
 
 body {
-  color: #757575;
+  color: var(--main-text-color);
   font-family: var(--main-font);
+  letter-spacing: 0.03em;
+  font-weight: 400;
 }
 
 /* ================HEADER======================= */
-.navigation-link {
+.navigation-link,
+.header-mail-link,
+.header-tel-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -28,26 +36,18 @@ body {
   color: var(--accent-color);
 }
 .header-mail-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--main-text-color);
 }
 .header-tel-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--main-text-color);
 }
-.mail-link:hover,
-.mail-link:focus {
+.header-mail-link:hover,
+.header-mail-link:focus {
   color: var(--accent-color);
 }
 
-.tel-link:hover,
-.tel-link:focus {
+.header-tel-link:hover,
+.header-tel-link:focus {
   color: var(--accent-color);
 }
 
@@ -64,17 +64,17 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--secondary-text-color);
 }
 .order-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
 }
 
 /* ================END HERO======================= */
@@ -84,31 +84,26 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
 }
 .feature-description {
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 /* ================END FEATURES======================= */
 
 /* ====================TEAM========================== */
 .team-member-name {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-  letter-spacing: 0.03em;
   color: var(--title-color);
 }
+
+.team-member-name,
 .team-member-title {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 /* ===================END TEAM======================= */
 
@@ -123,8 +118,9 @@ body {
   cursor: pointer;
 }
 
-.filter-button:hover {
-  color: #ffffff;
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--secondary-text-color);
   background-color: var(--accent-color);
 }
 
@@ -138,27 +134,28 @@ body {
 .work-description {
   font-size: 16px;
   line-height: 1.87;
-  letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
 
 /* ===================END WORKS SECTION=============== */
 
 /* ===================FOOTER======================= */
+.footer {
+  background-color: var(--dark-background);
+}
+
 .address {
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--secondary-text-color);
 }
+.address,
 .footer-mail {
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--contacts-text-color);
 }
 .footer-tel {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--contacts-text-color);
 }
 /* ===================END FOOTER==================== */
 
@@ -169,7 +166,6 @@ body {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--title-color);
 }
 
@@ -180,21 +176,16 @@ body {
   list-style: none;
 }
 
-.logo {
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #000000;
-}
+.logo,
 .logo-light {
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--black-logo-color);
+}
+.logo-light {
+  color: var(--secondary-text-color);
 }
 .logo-part {
   color: var(--accent-color);
